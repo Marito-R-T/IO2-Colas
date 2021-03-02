@@ -5,6 +5,8 @@
  */
 package com.mycompany.io2.primerparcial.frontend;
 
+import com.mycompany.io2.primerparcial.backend.UnServidorUnaCola;
+
 /**
  *
  * @author marito
@@ -12,11 +14,12 @@ package com.mycompany.io2.primerparcial.frontend;
 public class ventanaUnServidorUnaCola extends javax.swing.JDialog {
 
     /**
-     * Creates new form ventanaUnServidorUnaCola
+     * Creates new form prueba
      */
     public ventanaUnServidorUnaCola(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(parent);
     }
 
     /**
@@ -28,22 +31,314 @@ public class ventanaUnServidorUnaCola extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlFondo = new javax.swing.JPanel();
+        lblLamda = new javax.swing.JLabel();
+        lblServicio = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        lblServidores = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        lblLamda2 = new javax.swing.JLabel();
+        lblServicio1 = new javax.swing.JLabel();
+        btnCalcular = new javax.swing.JButton();
+        lblUPromedio = new javax.swing.JLabel();
+        txtUPromedio = new javax.swing.JTextField();
+        lblP = new javax.swing.JLabel();
+        txtP = new javax.swing.JTextField();
+        lblLQ = new javax.swing.JLabel();
+        txtL = new javax.swing.JTextField();
+        txtLq = new javax.swing.JTextField();
+        lblWq = new javax.swing.JLabel();
+        txtWq = new javax.swing.JTextField();
+        txtLamda = new javax.swing.JFormattedTextField();
+        txtMiu = new javax.swing.JFormattedTextField();
+        lblNumeroClientes = new javax.swing.JLabel();
+        txtNumeroClientes = new javax.swing.JFormattedTextField();
+        lblL = new javax.swing.JLabel();
+        lblpnt = new javax.swing.JLabel();
+        txtpnt = new javax.swing.JTextField();
+        lblW = new javax.swing.JLabel();
+        txtW = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(965, 184));
+        setResizable(false);
+        setSize(new java.awt.Dimension(965, 184));
+
+        pnlFondo.setMaximumSize(new java.awt.Dimension(953, 172));
+        pnlFondo.setMinimumSize(new java.awt.Dimension(953, 172));
+
+        lblLamda.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblLamda.setText("λ = (tasa de llegadas)");
+
+        lblServicio.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblServicio.setText("μ = (tasa de servicio)");
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        lblServidores.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblServidores.setText("s = (Servidor)");
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        lblLamda2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblLamda2.setText("λ = (tasa de llegadas)");
+
+        lblServicio1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblServicio1.setText("μ = (tasa de servicio)");
+
+        btnCalcular.setText("calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
+
+        lblUPromedio.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblUPromedio.setText("Utilización promedio");
+
+        txtUPromedio.setEditable(false);
+
+        lblP.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblP.setText("P");
+
+        txtP.setEditable(false);
+
+        lblLQ.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblLQ.setText("Lq");
+
+        txtL.setEditable(false);
+
+        txtLq.setEditable(false);
+
+        lblWq.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblWq.setText("Wq");
+
+        txtWq.setEditable(false);
+
+        txtLamda.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##0.00000"))));
+
+        txtMiu.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##0.00000"))));
+
+        lblNumeroClientes.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblNumeroClientes.setText("n = (numero Clientes)*");
+
+        txtNumeroClientes.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#"))));
+
+        lblL.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblL.setText("L");
+
+        lblpnt.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblpnt.setText("pn(t)");
+
+        txtpnt.setEditable(false);
+
+        lblW.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        lblW.setText("W");
+
+        txtW.setEditable(false);
+
+        javax.swing.GroupLayout pnlFondoLayout = new javax.swing.GroupLayout(pnlFondo);
+        pnlFondo.setLayout(pnlFondoLayout);
+        pnlFondoLayout.setHorizontalGroup(
+            pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFondoLayout.createSequentialGroup()
+                .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator4)
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pnlFondoLayout.createSequentialGroup()
+                                .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                                        .addComponent(lblLamda)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblServicio)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblServidores))
+                                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(lblLamda2, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                            .addComponent(lblServicio1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtLamda, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtMiu, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFondoLayout.createSequentialGroup()
+                                        .addComponent(lblNumeroClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(txtNumeroClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblUPromedio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtUPromedio, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblP, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(txtP))
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblL, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(txtL))
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblLQ, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtLq, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblW, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(txtW))
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblWq, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtWq))
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addComponent(lblpnt, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtpnt)))
+                .addContainerGap())
+        );
+        pnlFondoLayout.setVerticalGroup(
+            pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFondoLayout.createSequentialGroup()
+                .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlFondoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblServidores)
+                                    .addComponent(lblLamda)
+                                    .addComponent(lblServicio)
+                                    .addComponent(jSeparator2))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLamda2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLamda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblServicio1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMiu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNumeroClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumeroClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jSeparator3)
+                    .addGroup(pnlFondoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblUPromedio, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtUPromedio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblP, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblL, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLQ, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblW, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblWq, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtWq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblpnt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtpnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        // TODO add your handling code here:
+        UnServidorUnaCola servidor = new UnServidorUnaCola(Double.parseDouble(this.txtMiu.getText()), 
+                Double.parseDouble(this.txtLamda.getText()));
+        this.txtUPromedio.setText(String.valueOf(servidor.obtenerUtilizacionPromedio()));
+        this.txtL.setText(String.valueOf(servidor.obtenerPromedioClientesSistema()));
+        this.txtLq.setText(String.valueOf(servidor.obtenerLq()));
+        this.txtW.setText(String.valueOf(servidor.obtenerPromedioTiempoSistema()));
+        this.txtWq.setText(String.valueOf(servidor.obtenerWq()));
+        if(this.txtNumeroClientes.getText() != null && !this.txtNumeroClientes.getText().equals("")){
+            this.txtpnt.setText(String.valueOf(servidor.obtenerPromedioClientesSistemasN(Integer.parseInt(this.txtNumeroClientes.getText()))));
+            this.txtP.setText(String.valueOf(servidor.obtenerP(Integer.parseInt(this.txtNumeroClientes.getText()))));
+        }
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalcular;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JLabel lblL;
+    private javax.swing.JLabel lblLQ;
+    private javax.swing.JLabel lblLamda;
+    private javax.swing.JLabel lblLamda2;
+    private javax.swing.JLabel lblNumeroClientes;
+    private javax.swing.JLabel lblP;
+    private javax.swing.JLabel lblServicio;
+    private javax.swing.JLabel lblServicio1;
+    private javax.swing.JLabel lblServidores;
+    private javax.swing.JLabel lblUPromedio;
+    private javax.swing.JLabel lblW;
+    private javax.swing.JLabel lblWq;
+    private javax.swing.JLabel lblpnt;
+    private javax.swing.JPanel pnlFondo;
+    private javax.swing.JTextField txtL;
+    private javax.swing.JFormattedTextField txtLamda;
+    private javax.swing.JTextField txtLq;
+    private javax.swing.JFormattedTextField txtMiu;
+    private javax.swing.JFormattedTextField txtNumeroClientes;
+    private javax.swing.JTextField txtP;
+    private javax.swing.JTextField txtUPromedio;
+    private javax.swing.JTextField txtW;
+    private javax.swing.JTextField txtWq;
+    private javax.swing.JTextField txtpnt;
     // End of variables declaration//GEN-END:variables
 }

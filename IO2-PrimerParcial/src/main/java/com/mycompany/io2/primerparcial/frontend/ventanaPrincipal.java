@@ -12,12 +12,16 @@ package com.mycompany.io2.primerparcial.frontend;
 public class ventanaPrincipal extends javax.swing.JFrame {
 
     private ventanaNServidoresUnaCola ventanaNU;
+    private ventanaUnServidorUnaCola ventanaUU;
+    private ventanaNServidoresNColas ventanaNN;
     /**
      * Creates new form ventanaPrincipal
      */
     public ventanaPrincipal() {
         initComponents();
         ventanaNU = new ventanaNServidoresUnaCola(this, true);
+        ventanaUU = new ventanaUnServidorUnaCola(this, true);
+        ventanaNN = new ventanaNServidoresNColas(this, true);
         this.setLocationRelativeTo(null);
     }
 
@@ -46,8 +50,18 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         });
 
         btnUSUC.setText("Un servidor, Una Cola");
+        btnUSUC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUSUCActionPerformed(evt);
+            }
+        });
 
         btnNSNC.setText("N servidores, N colas");
+        btnNSNC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNSNCActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlVentanaLayout = new javax.swing.GroupLayout(pnlVentana);
         pnlVentana.setLayout(pnlVentanaLayout);
@@ -104,6 +118,17 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         ventanaNU.setVisible(true);
     }//GEN-LAST:event_btnNSUCActionPerformed
+
+    private void btnUSUCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUSUCActionPerformed
+        // TODO add your handling code here:
+        ventanaUU.setVisible(true);
+        
+    }//GEN-LAST:event_btnUSUCActionPerformed
+
+    private void btnNSNCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNSNCActionPerformed
+        // TODO add your handling code here:
+        ventanaNN.setVisible(true);
+    }//GEN-LAST:event_btnNSNCActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNSNC;
