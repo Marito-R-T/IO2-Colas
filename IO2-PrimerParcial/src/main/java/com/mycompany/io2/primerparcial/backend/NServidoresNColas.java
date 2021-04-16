@@ -11,8 +11,8 @@ package com.mycompany.io2.primerparcial.backend;
  */
 public class NServidoresNColas {
     
-    private double miu, lamda;
-    private int servidores, colas;
+    private final double miu, lamda;
+    private final int servidores, colas;
     
     public NServidoresNColas(double miu, double lamda, int servidores) {
         this.miu =  miu;
